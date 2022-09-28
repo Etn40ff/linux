@@ -111,6 +111,8 @@ static const struct goodix_chip_id goodix_chip_ids[] = {
 	{ .id = "912", .data = &gt967_chip_data },
 	{ .id = "9147", .data = &gt967_chip_data },
 	{ .id = "967", .data = &gt967_chip_data },
+
+	{ .id = "9896", .data = &gt9x_chip_data },
 	{ }
 };
 

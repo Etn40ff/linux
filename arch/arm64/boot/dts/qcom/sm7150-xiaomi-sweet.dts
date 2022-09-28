@@ -365,6 +365,26 @@
 	};
 };
 
+&i2c7 {
+	status = "okay";
+	clock-frequency = <100000>;
+
+	gt9896: touchscreen@5d {
+		compatible = "goodix,gt9896";
+		reg = <0x5d>;
+		interrupt-parent = <&tlmm>;
+		/*
+		interrupts = <9 IRQ_TYPE_EDGE_FALLING>;
+		irq-gpios = <&tlmm 9 GPIO_ACTIVE_HIGH>;
+		reset-gpios = <&tlmm 8 GPIO_ACTIVE_LOW>;
+		*/
+		interrupts = <0x09 0x00>;
+		irq-gpios = <&tlmm 0x09 0x00>;
+		reset-gpios = <&tlmm 0x08 0x00>;
+	};
+};
+
+
 &sdhc_2 {
 	status = "okay";
 
